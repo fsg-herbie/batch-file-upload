@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\ChunkFileUpload;
+namespace FsgHerbie\ChunkFileUpload;
 
 use Encore\Admin\Extension;
 

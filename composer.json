@@ -1,5 +1,5 @@
 {
-    "name": "catlane/chunk-file-upload",
+    "name": "fsg-herbie/chunk-file-upload",
     "description": "文件上传小扩展，可支持大文件分块分片上传到七牛云or本地，优化您上传大文件的苦恼",
     "type": "library",
     "keywords": ["laravel-admin", "extension","catlane","chunk_file"],
@@ -21,13 +21,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Encore\\ChunkFileUpload\\": "src/"
+            "FsgHerbie\\ChunkFileUpload\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Encore\\ChunkFileUpload\\ChunkFileUploadServiceProvider"
+                "FsgHerbie\\ChunkFileUpload\\ChunkFileUploadServiceProvider"
             ]
         }
     }

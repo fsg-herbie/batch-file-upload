@@ -1,6 +1,6 @@
 <?php
 
-use Encore\ChunkFileUpload\Http\Controllers\ChunkFileUploadController;
+use FsgHerbie\ChunkFileUpload\Http\Controllers\ChunkFileUploadController;
 
 
 Route::get('chunk-file-upload/get_qiniu_token', ChunkFileUploadController::class.'@getQiniuToken');

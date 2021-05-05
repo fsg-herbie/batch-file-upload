@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\ChunkFileUpload;
+namespace FsgHerbie\ChunkFileUpload;
 
 use Encore\Admin\Admin;
 use Illuminate\Support\ServiceProvider;
@@ -22,7 +22,7 @@ class ChunkFileUploadServiceProvider extends ServiceProvider {
         if ( $this->app->runningInConsole () && $assets = $extension->assets () ) {
             $this->publishes (
                 [
-                    $assets => public_path ( 'vendor/catlane/chunk-file-upload' ) ,
+                    $assets => public_path ( 'vendor/fsg-herbie/chunk-file-upload' ) ,
                     $source => config_path ( 'chunk_file_upload.php' )
                 ] ,
                 'chunk-file-upload'
@@ -35,11 +35,11 @@ class ChunkFileUploadServiceProvider extends ServiceProvider {
             ChunkFileUpload::routes ( __DIR__ . '/../routes/web.php' );
         } );
         Admin::booting ( function () {
-            Admin::js ( 'vendor/catlane/chunk-file-upload/js/main.js' );
-            Admin::js ( 'vendor/catlane/chunk-file-upload/js/webuploader.js' );
+            Admin::js ( 'vendor/fsg-herbie/chunk-file-upload/js/main.js' );
+            Admin::js ( 'vendor/fsg-herbie/chunk-file-upload/js/webuploader.js' );
 
-            Admin::css ( 'vendor/catlane/chunk-file-upload/css/style.css' );
-            Admin::css ( 'vendor/catlane/chunk-file-upload/css/webuploader.css' );
+            Admin::css ( 'vendor/fsg-herbie/chunk-file-upload/css/style.css' );
+            Admin::css ( 'vendor/fsg-herbie/chunk-file-upload/css/webuploader.css' );
         } );
     }
 

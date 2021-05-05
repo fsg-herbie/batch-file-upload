@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\ChunkFileUpload\Http\Controllers;
+namespace FsgHerbie\ChunkFileUpload\Http\Controllers;
 
 use Encore\Admin\Layout\Content;
 use Illuminate\Http\Request;

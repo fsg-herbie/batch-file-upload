@@ -7,8 +7,7 @@
  * Time: 2:40 PM
  */
 
-namespace Encore\ChunkFileUpload;
-
+namespace FsgHerbie\ChunkFileUpload;
 
 use Encore\Admin\Form\Field;
 
