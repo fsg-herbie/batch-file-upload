@@ -13,7 +13,7 @@ laravel-admin extension
 ## 安装
 
 ```
-$ composer require catlane/chunk-file-upload
+$ composer require fsg-herbie/batch-file-upload
 
 $ php artisan vendor:publish --tag=chunk-file-upload
 
@@ -23,7 +23,7 @@ $ php artisan storage:link
 
 ## 注册进Laravel-admin
 ```
-Encore\Admin\Form::extend('chunk_file', \Encore\ChunkFileUpload\ChunkFileField::class);
+Encore\Admin\Form::extend('chunk_file_upload', \FsgHerbie\ChunkFileUpload\ChunkFileField::class);
 ```
 
 然后配置 `config/chunk_file_upload.php`:
