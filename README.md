@@ -21,11 +21,6 @@ $ php artisan storage:link
 
 ```
 
-## 注册进Laravel-admin
-```
-Encore\Admin\Form::extend('chunk_file_upload', \FsgHerbie\ChunkFileUpload\ChunkFileField::class);
-```
-
 然后配置 `config/chunk_file_upload.php`:
 
 ```php

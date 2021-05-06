@@ -3,6 +3,7 @@
 namespace FsgHerbie\ChunkFileUpload;
 
 use Encore\Admin\Admin;
+use Encore\Admin\Form;
 use Illuminate\Support\ServiceProvider;
 
 class ChunkFileUploadServiceProvider extends ServiceProvider {
@@ -35,6 +36,7 @@ class ChunkFileUploadServiceProvider extends ServiceProvider {
             ChunkFileUpload::routes ( __DIR__ . '/../routes/web.php' );
         } );
         Admin::booting ( function () {
+            Form::extend('chunk_file_upload',ChunkFileField::class);
             Admin::js ( 'vendor/fsg-herbie/chunk-file-upload/js/main.js' );
             Admin::js ( 'vendor/fsg-herbie/chunk-file-upload/js/webuploader.js' );
 
