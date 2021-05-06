@@ -91,8 +91,8 @@ class ChunkFileField extends Field {
         
         //没有这个变量
         if(typeof uploaders == 'undefined'){
-            uploaders = [];
-        }     
+            var uploaders = [];
+        }
         
         accept = [
             {
@@ -102,9 +102,7 @@ class ChunkFileField extends Field {
             }
         ];
 		upload = chunk_file ('$name',accept,'$this->disk','$driver');
-		uploaders.push(upload)
-		console.log(uploaders)
-        
+		uploaders.push(upload);
 SRC;
 
         return parent::render ();

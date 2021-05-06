@@ -130,13 +130,13 @@ table {
     border-color: red;
 }
 
-.uploader .filelist {
+.uploader .filelist,.uploader .file-view-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.uploader .filelist:after {
+.uploader .filelist:after,.uploader .file-view-list:after {
     content: '';
     display: block;
     width: 0;
@@ -145,7 +145,7 @@ table {
     clear: both;
 }
 
-.uploader .filelist li {
+.uploader .filelist li,.uploader .file-view-list li {
     width: 110px;
     height: 110px;
     background: url(../image/bg.png) no-repeat;
@@ -158,12 +158,12 @@ table {
     font-size: 12px;
 }
 
-.uploader .filelist li p.log {
+.uploader .filelist li p.log,.uploader .file-view-list li p.log {
     position: relative;
     top: -45px;
 }
 
-.uploader .filelist li p.title {
+.uploader .filelist li p.title,.uploader .file-view-list li p.title {
     position: absolute;
     top: 0;
     left: 0;
@@ -176,7 +176,7 @@ table {
     text-align: left;
 }
 
-.uploader .filelist li p.progress {
+.uploader .filelist li p.progress,.uploader .file-view-list li p.progress {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -187,7 +187,7 @@ table {
     margin: 0 !important;
     background: none !important;
 }
-.uploader .filelist li p.progress span {
+.uploader .filelist li p.progress span,.uploader .file-view-list li p.progress span {
     display: none;
     overflow: hidden;
     width: 0;
@@ -234,7 +234,7 @@ table {
     }
 }
 
-.uploader .filelist li p.imgWrap {
+.uploader .filelist li p.imgWrap,.uploader .file-view-list li p.imgWrap {
     position: relative;
     z-index: 2;
     line-height: 110px;
@@ -256,11 +256,11 @@ table {
     transition: 200ms ease-out;
 }
 
-.uploader .filelist li img {
+.uploader .filelist li img,.uploader .file-view-list li img {
     width: 100%;
 }
 
-.uploader .filelist li p.error {
+.uploader .filelist li p.error ,.uploader .file-view-list li p.error {
     background: #f43838;
     color: #fff;
     position: absolute;
@@ -272,7 +272,7 @@ table {
     z-index: 100;
 }
 
-.uploader .filelist li .success {
+.uploader .filelist li .success,.uploader .file-view-list li .success {
     display: block;
     position: absolute;
     left: 0;
@@ -283,7 +283,7 @@ table {
     background: url(../image/success.png) no-repeat right bottom;
 }
 
-.uploader .filelist div.file-panel {
+.uploader .filelist div.file-panel ,.uploader .file-view-list div.file-panel {
     position: absolute;
     height: 0;
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000', endColorstr='#80000000')\0;
@@ -295,7 +295,7 @@ table {
     z-index: 300;
 }
 
-.uploader .filelist div.file-panel span {
+.uploader .filelist div.file-panel span,.uploader .file-view-list div.file-panel span {
     width: 24px;
     height: 24px;
     display: inline;
@@ -307,24 +307,24 @@ table {
     cursor: pointer;
 }
 
-.uploader .filelist div.file-panel span.rotateLeft {
+.uploader .filelist div.file-panel span.rotateLeft ,.uploader .file-view-list div.file-panel span.rotateLeft {
     background-position: 0 -24px;
 }
-.uploader .filelist div.file-panel span.rotateLeft:hover {
+.uploader .filelist div.file-panel span.rotateLeft:hover,.uploader .file-view-list div.file-panel span.rotateLeft:hover {
     background-position: 0 0;
 }
 
-.uploader .filelist div.file-panel span.rotateRight {
+.uploader .filelist div.file-panel span.rotateRight,.uploader .file-view-list div.file-panel span.rotateRight {
     background-position: -24px -24px;
 }
-.uploader .filelist div.file-panel span.rotateRight:hover {
+.uploader .filelist div.file-panel span.rotateRight:hover,.uploader .file-view-list div.file-panel span.rotateRight:hover {
     background-position: -24px 0;
 }
 
-.uploader .filelist div.file-panel span.cancel {
+.uploader .filelist div.file-panel span.cancel,.uploader .file-view-list div.file-panel span.cancel {
     background-position: -48px -24px;
 }
-.uploader .filelist div.file-panel span.cancel:hover {
+.uploader .filelist div.file-panel span.cancel:hover,.uploader .file-view-list div.file-panel span.cancel:hover {
     background-position: -48px 0;
 }
 

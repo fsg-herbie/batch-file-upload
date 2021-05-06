@@ -1,6 +1,5 @@
 function chunk_file ( name , accept , disk , driver ) {
-    var initVal = $ ( '#' + name + '-savedpath' ).val ();
-    initVal = initVal ? true : false;
+    var initVal = $('#' + name + '-savedpath').val();
     var $wrap = $ ( '#uploader' + name ) ,
         // 图片容器
         $queue = $ ( '<ul class="filelist"></ul>' )
@@ -455,35 +454,41 @@ function chunk_file ( name , accept , disk , driver ) {
         if ( window.chunk_file.fileNumLimit <= 1 ) {
             $ ( '#' + name + '-savedpath' ).val ( window.chunk_file.url + '/' + res.key );
         } else {
-            if ( window.chunk_file.saveType == 'json' ) {//为json类型
-
-                if ( initVal ) {//如果初始有数据
-                    $ ( '#' + name + '-savedpath' ).val ( '' );
-                    initVal = false;//然后置false
-                }
+            if (window.chunk_file.saveType == 'json'){//为json类型
                 //先拿出来
-                var data = $ ( '#' + name + '-savedpath' ).val ();
-                if ( !data ) {//为空
+                var data = $('#' + name + '-savedpath').val();
+                if (!data){//为空
                     data = new Array ();
                     data.push ( res.key );
 
                 } else {
                     try {
-                        data = JSON.parse ( data );
+                        data = JSON.parse(data);
                     } catch ( e ) {
-                        data = new Array ();
+                        data = new Array();
                     }
-
                     data.push ( res.key );
                 }
-                $ ( '#' + name + '-savedpath' ).val ( JSON.stringify ( data ) );
-
+                $('#' + name + '-savedpath' ).val(JSON.stringify(data));
+                UploadView(data)
             }
-
         }
 
-        ctx = new Array ();
+        ctx = new Array();
         uploader.options.chunked = true;
+    }
+
+    function UploadView(data){
+        var fileView = $('#'+name+'-file-view');
+        $('#'+name+'-file-view li').remove();
+        data.forEach(function (item,index){
+            var $li = $('<li id="VIEW_FILE_' + index + '">' +
+                '<p class="title"></p>' +
+                '<p class="imgWrap"><img src="/storage/'+item+'"></p>' +
+                '<p class="progress"><span></span></p>' +
+                '</li>' );
+            $li.appendTo(fileView);
+        })
     }
 
     function URLSafeBase64Decode ( data ) {
